@@ -1,0 +1,9 @@
+version: "2"
+services:
+  api:
+    image : openjdk:11-jre
+    ports:
+      - "8080:8080"
+    volumes:
+      - "../petclinic-api/petclinic-endpoint/target/petclinic.jar:/opt/petclinic.jar"
+    command: ["java", "-jar", "/opt/petclinic.jar"]
