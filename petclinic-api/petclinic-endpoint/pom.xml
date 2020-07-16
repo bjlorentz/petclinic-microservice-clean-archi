@@ -14,12 +14,12 @@
 	<name>petclinic-endpoint</name>
 	<description>Demo project for Spring Boot</description>
 
-<!--	<properties>-->
-<!--		<java.version>11</java.version>-->
-<!--		<kotlin.version>1.3.72</kotlin.version>-->
-<!--	</properties>-->
-
 	<dependencies>
+		<dependency>
+			<groupId>fr.lorentz</groupId>
+			<artifactId>petclinic-persistence</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>fr.lorentz</groupId>
 			<artifactId>petclinic-business</artifactId>
@@ -83,6 +83,7 @@
 						<arg>-Xjsr305=strict</arg>
 					</args>
 					<compilerPlugins>
+						<plugin>all-open</plugin>
 						<plugin>spring</plugin>
 					</compilerPlugins>
 				</configuration>

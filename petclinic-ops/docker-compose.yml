@@ -7,3 +7,11 @@ services:
     volumes:
       - "../petclinic-api/petclinic-endpoint/target/petclinic.jar:/opt/petclinic.jar"
     command: ["java", "-jar", "/opt/petclinic.jar"]
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "petclinic"
+      POSTGRES_PASSWORD: "petclinic"
+      POSTGRES_DB: "petclinic"
