@@ -1,4 +1,4 @@
-package fr.lorentz.petclinic.pet
+package fr.lorentz.petclinic.pet.gateway
 
 import fr.lorentz.petclinic.pet.entity.Pet
 
