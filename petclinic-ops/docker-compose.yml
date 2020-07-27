@@ -6,7 +6,7 @@ services:
       - "8080:8080"
     volumes:
       - "../petclinic-api/petclinic-endpoint/target/petclinic.jar:/opt/petclinic.jar"
-    command: ["java", "-jar", "/opt/petclinic.jar"]
+    command: ["java", "-jar", "/opt/petclinic.jar", "--spring.profiles.active=docker"]
   db:
     image: postgres
     ports:
